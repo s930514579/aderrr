@@ -104,9 +104,9 @@ class Handler(BaseHTTPRequestHandler):
             length = int(self.headers.get("Content-Length", "0"))
             action = json.loads(self.rfile.read(length)).get("action")
             commands = {
-                "test": [".venv/bin/python", "-m", "unittest", "discover", "-s", "tests", "-v"],
-                "compile": [".venv/bin/python", "-m", "py_compile", "tools/editor_server.py"],
-                "app": [".venv/bin/python", "-m", "aderrr"],
+                "test": ["python", "-m", "unittest", "discover", "-s", "tests", "-v"],
+                "compile": ["python", "-m", "py_compile", "tools/editor_server.py"],
+                "app": ["python", "-m", "aderrr"],
             }
             if action not in commands:
                 raise ValueError("unsupported action")
