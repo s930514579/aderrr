@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: aderrr-editor
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/files

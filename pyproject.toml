@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aderrr"
+version = "0.1.0"
+description = "A starter Python project"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+aderrr = "aderrr.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
